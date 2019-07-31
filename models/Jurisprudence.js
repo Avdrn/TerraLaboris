@@ -9,6 +9,6 @@ const jurisprudenceSchema = new Schema({
   timestamps: true
 });
 
-const Jurisprudence = mongoose.model("jurisprudence", jurisprudenceSchema);
+const Jurisprudence = mongoose.model("jurisprudence", jurisprudenceSchema, "jurisprudences");
 
 module.exports = Jurisprudence;

@@ -3,7 +3,7 @@ const router = express.Router();
 const Jurisprudence = require("../../models/Jurisprudence")
 
 router.get('/', (req, res, next) => {
-  res.render("jurisprudence/add");
+  res.render("jurisprudence/jurisprudence-add");
 });
 
 

@@ -1,0 +1,19 @@
+
+<div class="signin">
+  <h1 class="wrapper">All Jurisprudence</h1>
+
+    <div>
+      {{#each jurisprudence}}
+        <p><span>Author:</span>{{this.author}}</p> 
+        <p><span>Content:</span>{{this.content}}</p>         
+        <a href="/jurisprudence/{{this._id}}">Check decision</a> 
+        </div> 
+        
+      
+        <a href="/jurisprudence-edit/{{this._id}}">EDIT</a>
+        <a href="/jurisprudence-delete/{{this._id}}">DELETE</a>        
+      
+      {{/each}}
+    </div>
+</div>
+

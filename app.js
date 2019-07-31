@@ -78,7 +78,10 @@ const about = require('./routes/main/about');
 const signup = require('./routes/user/signup');
 const login = require('./routes/user/login');
 const logout = require('./routes/user/logout');
-const add = require('./routes/jurisprudence/add');
+const add = require('./routes/jurisprudence/jurisprudence-add');
+const all = require('./routes/jurisprudence/jurisprudence-all');
+const itemDelete = require('./routes/jurisprudence/jurisprudence-delete');
+
 
 
 
@@ -88,6 +91,8 @@ app.use('/signup', signup);
 app.use('/login', login);
 app.use('/logout', logout);
 app.use('/jurisprudence-add', add);
+app.use('/jurisprudence-all', all);
+app.use('/jurisprudence-delete', itemDelete);
 
 
 
