@@ -1,0 +1,56 @@
+<div class="container">
+
+  <div class="title">
+
+    <a class="title-link" href="/about">TERRA LABORIS</a>
+    <p class="text">Recherche jurisprudencielles</p>
+  </div>
+
+
+<div class="search">
+   <div class="search-container">
+     <input type="text" placeholder="Search..." name="search">
+     <button class="search-img"> <a href="#"></a>Q</button>
+  </div>
+</div>
+
+  <nav class="navbar">
+       
+    <div class="hamburger-menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+
+{{#if user}}
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="/jurisprudence-add">Add decision</a></li>
+
+    </ul>
+
+  {{else}}
+  <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="/signup">Sign up</a></li>
+    </ul>
+
+
+{{/if}}
+   
+  </nav>
+  
+</div>
+
+
+
+{{!-- 
+<ul>
+  <li><a href="/redaction">Rédaction</a></li>
+  <li><a href="/renouvellement">Renouvellement</a></li>
+  <li><a href="/modification">Modification</a></li>
+  <li><a href="/fin">Fin</a></li>
+</ul> --}}
+

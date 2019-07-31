@@ -1,0 +1,23 @@
+<div class="signin">
+  <form class="wrapper" action="/signup" method="POST" id="form">
+    <h1>Sign up</h1>
+    <input type="email" placeholder="E-Mail Adress" name="email">
+    <input type="text" placeholder="User Name" name="username">
+    <input type="password" placeholder="Password" name="password">
+    <select name="title">
+      <option selected disabled>Title</option>
+      <option value="teacher">Teacher</option>
+      <option value="student">Student</option>
+      <option value="private">Private</option>
+      <option value="company">Company</option>
+      <option value="other">Other</option>
+    </select>
+    <input type="submit">
+
+  {{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+
+
+  </form>
+</div>

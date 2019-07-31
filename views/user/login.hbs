@@ -1,0 +1,16 @@
+<div class="signin">
+  <form class="wrapper" action="/login" method="POST" id="form">
+    <h1>Login</h1>
+    <input type="text" placeholder="User Name" name="username">
+    <input type="password" placeholder="Password" name="password">
+    <input type="submit">
+
+  {{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+
+  <p class="account-message">
+    Don't have an account? <a href="/signup">Sign up</a>
+  </p>
+  </form>
+</div>

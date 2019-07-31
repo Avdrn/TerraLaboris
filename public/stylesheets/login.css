@@ -1,0 +1,101 @@
+.signin {
+  padding: 10vw;
+}
+
+.wrapper {
+  padding-top: 100px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] input[type="date"]{
+  font-family: 'Courier New', 'Courier', monospace;
+  background-color: #eceff1;
+  border: 3px solid #ddd;
+  border-radius: 20pt;
+  width: calc(100% - 35pt);
+  margin: 0;
+  padding-left: 15pt;
+  padding-right: 15pt;
+  font-size: 15px;
+  height: 30pt;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 10pt;
+  margin-top: 10pt;
+  color: #333;
+}
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder {
+  color: #ddd;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus {
+  border: 3px solid #333;
+}
+select {
+  font-family: 'Courier New', 'Courier', monospace;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 20pt;
+  border: 3px solid #ddd;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 35pt;
+  padding-left: 15pt;
+  padding-right: 15pt;
+  margin-bottom: 10pt;
+  margin-top: 10pt;
+  transition: 0.2s ease-in-out;
+  font-size: 15px;
+  color: #ddd;
+  background-image: url(https://i.postimg.cc/sxMpz5j3/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+select::-webkit-input-placeholder {
+  color: #ddd;
+  font-weight: bold;
+}
+select:focus {
+  border: 3px solid #333;
+  color: #333;
+  background-image: url(https://i.postimg.cc/284xSFd5/arrow-black.png);
+}
+input[type="submit"] {
+  font-family: Helvecia, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5pt;
+  text-transform: uppercase;
+  background-color: #333;
+  border: 0;
+  color: #fff;
+  height: 35pt;
+  padding-left: 30pt;
+  padding-right: 30pt;
+  border-radius: 20pt;
+  margin-top: 10pt;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  opacity: 0.8;
+  transform: translate(-50%, -10%);
+}
+
+.error-message {
+  background: #F02B63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.account-message a {
+  text-decoration: none;
+  color: chocolate;
+}
+
+.account-message a:hover {
+text-decoration: underline;
+}

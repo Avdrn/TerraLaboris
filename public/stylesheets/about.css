@@ -1,0 +1,16 @@
+.about {
+  text-justify: auto;
+  padding: 10vw;
+}
+
+.about h1 {
+  padding-top: 100px;
+
+} 
+
+.about h2, p {
+  margin: 5px;
+  padding: 5px;
+  text-align: justify;
+}
+
