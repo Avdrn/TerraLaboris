@@ -1,19 +1,19 @@
 
 <div class="signin">
   <h1 class="wrapper">All Jurisprudence</h1>
-
-    <div>
-      {{#each jurisprudence}}
-        <p><span>Author:</span>{{this.author}}</p> 
-        <p><span>Content:</span>{{this.content}}</p>
-        <img class="pdf-sizing" src="images/pdf.png" alt="{{this.path}}">
-        <a href="/jurisprudence-single/{{id}}">Check decision</a> 
-        <a href="/jurisprudence-edit/{{id}}">EDIT</a>
-        <a href="/jurisprudence-delete/{{this._id}}">DELETE</a>        
-      <br>
-    </div> 
-      {{/each}}
-    </div>
+</div>
+    {{#each jurisprudence}}
+      <div class="all-decision">
+          <p><span>Author:</span>{{this.author}}</p> 
+          <p><span>Content:</span>{{this.content}}</p>
+        <div class="flex-container">
+          <a class="flex-item" href="/jurisprudence-single/{{id}}"><img class="pdf-sizing" src="images/expand-button.png" alt="{{this.path}}"></a> 
+          <a class="flex-item" href="/jurisprudence-single/{{id}}"><img class="pdf-sizing" src="images/pdf.png" alt="{{this.path}}"></a> 
+          <a title="Button fade blue/green" class="button btnFade btnBlueGreen"href="/jurisprudence-edit/{{id}}">EDIT</a>
+          <a title="Button fade blue/green" class="button btnFade btnRed" href="/jurisprudence-delete/{{this._id}}">DELETE</a>  
+        </div>      
+      </div> 
+    {{/each}}
 </div>
 
 

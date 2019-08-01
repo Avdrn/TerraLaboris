@@ -54,11 +54,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true,
   cookie: { maxAge: 60000 },
-  store: new MongoStore({
-    mongooseConnection: mongoose.connection,
-    ttl: 24 * 60 * 60 // 1 day
-  })
-}));
+  }));
 // attaching session data to res.locals, 
 // making it available to all hbs files after this middleware
 app.use(function(req,res,next) {

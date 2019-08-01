@@ -5,7 +5,15 @@
     <input type="text" placeholder="Author Name" name="author">
     <input type="text" placeholder="Add a short summary" name="content">
     <input type="date" placeholder="Date of rendering" name="date"> <br>
-    <input class="field-input" type="file" name="upload">
+
+    <div class="file-upload">
+      <div class="file-select">
+        <div class="file-select-button" id="fileName">Choose File</div>
+        <div class="file-select-name" id="noFile">No file chosen...</div> 
+        <input type="file" name="upload" id="chooseFile">
+      </div>
+    </div>
+
     <button class="submit" type="submit">Add jurisprudence</button>
     </form>
 </div>

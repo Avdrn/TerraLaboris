@@ -1,9 +1,10 @@
 .signin {
-  padding: 10vw;
+  padding: 3vw;
+  padding-top: 30px;
 }
 
 .wrapper {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
