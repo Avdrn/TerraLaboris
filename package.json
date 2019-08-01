@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "debug": "nodemon --inspect  ./bin/www",
     "dev": "DEBUG=terralaboris:* nodemon ./bin/www",
     "dev-windows": "nodemon ./bin/www"
   },

@@ -5,6 +5,8 @@ const Jurisprudence = require("../../models/Jurisprudence")
 router.get('/:id', (req, res, next) => {
   Jurisprudence.findById(req.params.id)
   .then((jurisprudence) => {
+    debugger
+
     res.render('jurisprudence/jurisprudence-edit', {jurisprudence});
   })
   .catch((error) => {
@@ -12,10 +14,12 @@ router.get('/:id', (req, res, next) => {
   })
 });
 
-router.post('/', (req, res, next) => {
+router.post('/:id', (req, res, next) => {
   const {author, date, content} = req.body;
-  Jurisprudence.findByIdAndUpdate(req.params.id, { author, date, content})
+  debugger
+  Jurisprudence.findByIdAndUpdate(req.params.id, {author, date, content})
     .then((jurisprudence) => {
+      debugger
       res.redirect('/jurisprudence-all');
     })
     .catch((error) => {
