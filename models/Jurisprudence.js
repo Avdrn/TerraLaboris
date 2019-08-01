@@ -4,7 +4,8 @@ const Schema   = mongoose.Schema;
 const jurisprudenceSchema = new Schema({
   author: String,
   date: Date,
-  content: String
+  content: String,
+  path: String,
 }, {
   timestamps: true
 });

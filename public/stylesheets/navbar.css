@@ -144,3 +144,7 @@ transform-origin: right;
   transform: scaleX(1);
 }
 
+.capital-letter {
+  color: chocolate;
+  font-weight: 1000;
+}

@@ -1,0 +1,15 @@
+
+<div class="signin">
+  <div class="wrapper">
+ 
+    <p><span>Author:</span><br>{{jurisprudence.author}}</p>
+    <p><span>Content:</span>{{jurisprudence.content}}</p>
+    <p>{{jurisprudence.date}}</p>
+    <img class="pdf-sizing" src="images/pdf.png" alt="{{jurisprudence.path}}">
+
+
+    <a href="/jurisprudence-edit/{{jurisprudence._id}}">EDIT</a>
+    <a href="/jurisprudence-delete/{{jurisprudence._id}}">DELETE</a>
+    <a href="/jurisprudence-all">ALL</a>
+  </div>
+</div>

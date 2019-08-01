@@ -1,13 +1,14 @@
 <div class="signin">
-  <form class="wrapper" action="/jurisprudence-add" method="POST" id="form">
+  <form class="wrapper" action="/jurisprudence-add" method="POST" id="form" enctype="multipart/form-data">
     <p> Hello {{user.username}}, wanna add some jurisprudence to the database?</p>
     <h2>Add a decision</h2>
     <input type="text" placeholder="Author Name" name="author">
     <input type="text" placeholder="Add a short summary" name="content">
-    <input type="date" placeholder="Date of rendering" name="date">
-    <input type="submit">
-
-  </form>
+    <input type="date" placeholder="Date of rendering" name="date"> <br>
+    <input class="field-input" type="file" name="upload">
+    <button class="submit" type="submit">Add jurisprudence</button>
+    </form>
+</div>
   
 
 </div>

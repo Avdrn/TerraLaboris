@@ -11,10 +11,6 @@ const path         = require('path');
 const session      = require("express-session");
 const MongoStore   = require("connect-mongo")(session);
 const passport     = require("passport");   
-const LocalStrategy= require("passport-local");
-const passportLocalMongoose = require("passport-local-mongoose");
-
-
 
 mongoose
   .connect('mongodb://localhost/terralaboris', {useNewUrlParser: true})
@@ -70,8 +66,20 @@ app.use(function(req,res,next) {
   next();
 })
 
+// Protect routes
+
+function protectRoute(req, res, next){
+  if(req.session.currentUser){ // <== if there's user in the session (user is logged in)
+    next();
+    // ==> go to the next route ---
+  } else {
+    res.redirect('/login');
+  }
+}
+
+
 // Routes
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Terra Laboris';
 
 const search = require('./routes/main/search');
 const about = require('./routes/main/about');
@@ -81,18 +89,29 @@ const logout = require('./routes/user/logout');
 const add = require('./routes/jurisprudence/jurisprudence-add');
 const all = require('./routes/jurisprudence/jurisprudence-all');
 const itemDelete = require('./routes/jurisprudence/jurisprudence-delete');
+const single = require('./routes/jurisprudence/jurisprudence-single');
+const edit = require('./routes/jurisprudence/jurisprudence-edit');
 
+/*----upload-----*/
 
+var multer = require("multer");
+let upload = multer({ dest: "public/images" });
+
+// app.use('/uploads', upload.single("upload"), require('./routes/jurisprudence/jurisprudence-add'));
+// app.use('/uploads', require("./routes/jurisprudence/jurisprudence-all"));
 
 
 app.use('/', search);
 app.use('/about', about);
 app.use('/signup', signup);
 app.use('/login', login);
-app.use('/logout', logout);
-app.use('/jurisprudence-add', add);
 app.use('/jurisprudence-all', all);
-app.use('/jurisprudence-delete', itemDelete);
+app.use('/jurisprudence-single', single);
+app.use('/logout', protectRoute, logout);
+app.use('/jurisprudence-add', upload.single("upload"), protectRoute, add);
+app.use('/jurisprudence-delete', protectRoute, itemDelete);
+app.use('/jurisprudence-edit', protectRoute, edit);
+
 
 
 

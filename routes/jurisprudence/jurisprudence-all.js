@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Jurisprudence = require("../../models/Jurisprudence")
+const upload = require("../../models/upload")
 
 
 router.get('/', (req, res) => {

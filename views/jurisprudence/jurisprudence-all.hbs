@@ -5,15 +5,16 @@
     <div>
       {{#each jurisprudence}}
         <p><span>Author:</span>{{this.author}}</p> 
-        <p><span>Content:</span>{{this.content}}</p>         
-        <a href="/jurisprudence/{{this._id}}">Check decision</a> 
-        </div> 
-        
-      
-        <a href="/jurisprudence-edit/{{this._id}}">EDIT</a>
+        <p><span>Content:</span>{{this.content}}</p>
+        <img class="pdf-sizing" src="images/pdf.png" alt="{{this.path}}">
+        <a href="/jurisprudence-single/{{id}}">Check decision</a> 
+        <a href="/jurisprudence-edit/{{id}}">EDIT</a>
         <a href="/jurisprudence-delete/{{this._id}}">DELETE</a>        
-      
+      <br>
+    </div> 
       {{/each}}
     </div>
 </div>
+
+
 
