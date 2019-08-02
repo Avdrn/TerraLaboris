@@ -5,6 +5,7 @@
 
 .wrapper {
   padding-top: 150px;
+  padding-left: 18px;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {

@@ -54,6 +54,8 @@ app.use(session({
   resave: true,
   saveUninitialized: true,
   cookie: { maxAge: 60000 },
+  ttl: 2 * 60 * 60 // 2-hour sessions
+
   }));
 // attaching session data to res.locals, 
 // making it available to all hbs files after this middleware
