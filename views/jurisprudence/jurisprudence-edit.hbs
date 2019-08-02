@@ -3,9 +3,9 @@
   <form class="wrapper" action="/jurisprudence-edit/{{jurisprudence.id}}" method="POST" id="form">
     <p> Hello {{user.username}}, wanna edit the jurisprudence to the database?</p>
     <h2>Modify the content of a decision</h2>
-    <input type="text" placeholder="{{jurisprudence.author}}" name="author">
-    <input type="text" placeholder="{{jurisprudence.content}}" name="content">
-    <input type="date" placeholder="{{jurisprudence.date}}" name="date">
+    <input type="text" value="{{jurisprudence.author}}" name="author">
+    <input type="text" value="{{jurisprudence.content}}" name="content">
+    <input type="date" value="{{jurisprudence.parsedDate}}" name="date">
     <br>
     <input type="submit">
   </form>

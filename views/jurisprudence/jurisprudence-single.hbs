@@ -2,14 +2,16 @@
 <div class="signin">
   <div class="wrapper">
  
-    <p class="author">{{jurisprudence.author}}</p> 
-    <p>{{jurisprudence.date}}</p>
     <p>{{jurisprudence.content}}</p>
+    <p class="author">{{jurisprudence.author}}</p> 
+    <p>{{jurisprudence.parsedDate}}</p>
+     
+
     
   <div class="flex-container">
     <a class="flex-item" href=""><img class="pdf-sizing" src="/images/pdfIcone.png"></a> 
-    <a title="Button fade blue/green" class="button btnFade btnBlueGreen"href="/jurisprudence-edit/{{id}}">EDIT</a>
-    <a title="Button fade blue/green" class="button btnFade btnRed" href="/jurisprudence-delete/{{this._id}}">DELETE</a>  
+    <a title="Button fade blue/green" class="button btnFade btnBlueGreen"href="/jurisprudence-edit/{{jurisprudence._id}}">EDIT</a>
+    <a title="Button fade blue/green" class="button btnFade btnRed" href="/jurisprudence-delete/{{jurisprudence._id}}">DELETE</a>  
     <a class="button btnFade btnBlue" href="/jurisprudence-all">ALL</a>
  </div>
 

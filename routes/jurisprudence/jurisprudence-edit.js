@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const Jurisprudence = require("../../models/Jurisprudence")
- 
+const moment = require("moment");
+
 router.get('/:id', (req, res, next) => {
   Jurisprudence.findById(req.params.id)
   .then((jurisprudence) => {
-    debugger
-
+    jurisprudence.parsedDate = moment(jurisprudence.date).format("YYYY-MM-DD")
     res.render('jurisprudence/jurisprudence-edit', {jurisprudence});
   })
   .catch((error) => {
