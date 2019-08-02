@@ -13,8 +13,8 @@ const MongoStore   = require("connect-mongo")(session);
 const passport     = require("passport");   
 
 mongoose
-  // .connect('mongodb://localhost/terralaboris', {useNewUrlParser: true})
-    .connect(`${process.env.DB}`, {useNewUrlParser: true})
+  .connect('mongodb://localhost/terralaboris', {useNewUrlParser: true})
+    // .connect(`${process.env.DB}`, {useNewUrlParser: true})
 
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
@@ -91,6 +91,8 @@ const all = require('./routes/jurisprudence/jurisprudence-all');
 const itemDelete = require('./routes/jurisprudence/jurisprudence-delete');
 const single = require('./routes/jurisprudence/jurisprudence-single');
 const edit = require('./routes/jurisprudence/jurisprudence-edit');
+const downloadpdf = require('./routes/jurisprudence/jurisprudence-downloadpdf');
+
 
 /*----upload-----*/
 
@@ -105,6 +107,7 @@ app.use('/', search);
 app.use('/about', about);
 app.use('/signup', signup);
 app.use('/login', login);
+app.use('/jurisprudence-downloadpdf', downloadpdf);
 app.use('/jurisprudence-all', all);
 app.use('/jurisprudence-single', single);
 app.use('/logout', protectRoute, logout);
