@@ -13,8 +13,8 @@ const MongoStore   = require("connect-mongo")(session);
 const passport     = require("passport");   
 
 mongoose
-  .connect('mongodb://localhost/terralaboris', {useNewUrlParser: true})
-    // .connect(`${process.env.MONGODB_URI}`, {useNewUrlParser: true})
+  // .connect('mongodb://localhost/terralaboris', {useNewUrlParser: true})
+    .connect(`${process.env.DB}`, {useNewUrlParser: true})
 
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
